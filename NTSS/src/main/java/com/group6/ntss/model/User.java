@@ -6,18 +6,18 @@ import javax.persistence.*;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long userId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	private Long user_id;
 	private String email;
 	private String password;
 	private String user_type;
     
     public Long getUserId() {
-		return userId;
+		return user_id;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setUserId(Long user_id) {
+		this.user_id = user_id;
 	}
 
 	public String getEmail() {
@@ -40,8 +40,8 @@ public class User {
 		return user_type;
 	}
 
-	public void setUserType(String userType) {
-		this.user_type = userType;
+	public void setUserType(String user_type) {
+		this.user_type = user_type;
 	}
 	
 }

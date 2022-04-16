@@ -21,20 +21,21 @@ public class RegistrationController {
 		return "home";
 	}
 	
-	@GetMapping("/getUser")
-	public String getUserDetails(Model model) {
-		String email = "xyz@gmail.com";
-		model.addAttribute("email", email);
-		return "home";
+	@GetMapping("/signup")
+	public String getUserDetails() {		
+		return "signup";
 	}
 
 	@PostMapping(path ="/registerUser")
-	public void registerUser(User user)
+	public String registerUser(User user)
 	{
 	    System.out.println("Username= " + user.getEmail());
 	    System.out.println("Password= " + user.getPassword());
 	    System.out.println("UserType= " + user.getUserType());	    
 	    	
 		repo.save(user);
+		return "home";
 	}
+	
+
 }
