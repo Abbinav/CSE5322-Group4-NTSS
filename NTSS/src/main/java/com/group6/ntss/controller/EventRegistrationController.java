@@ -2,6 +2,7 @@ package com.group6.ntss.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,7 @@ public class EventRegistrationController {
   @Autowired
   private EventRepositry event_repositry;
 
-  @PostMapping(path="/event/add")
+  @PostMapping(path="/add")
   public @ResponseBody String addNewEvent (@RequestParam String event_name
       , @RequestParam String theme
       , @RequestParam String slogan
@@ -33,4 +34,9 @@ public class EventRegistrationController {
     event_repositry.save(e);
     return "Saved";
   }
+  
+  @GetMapping("")
+	public String dummy() {		
+		return "event";
+	}
 }
