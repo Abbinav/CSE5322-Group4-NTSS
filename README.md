@@ -23,3 +23,13 @@ CREATE TABLE `user` (
 `userType` varchar(45) NOT NULL,
 PRIMARY KEY (`userId`)
 );
+
+CREATE TABLE `event` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`event_name` varchar(45) NOT NULL,
+`theme` varchar(45) NULL,
+`slogan` varchar(45) NULL,
+`location` varchar(45) NULL,
+`duration` varchar(45) NULL,
+PRIMARY KEY (`id`)
+);
