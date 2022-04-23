@@ -28,7 +28,10 @@
       </li>  
       <li class="nav-item">
         <a class="nav-link" href="/event">Event Proposal</a>
-      </li>     
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="/event/get-events">Event Registration</a>
+      </li>      
     </ul>
   </div>
 </nav>

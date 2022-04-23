@@ -33,3 +33,11 @@ CREATE TABLE `event` (
 `duration` varchar(45) NULL,
 PRIMARY KEY (`id`)
 );
+
+CREATE TABLE user_registered_events ( 
+	id int(11) NOT NULL PRIMARY KEY, 
+	user_id int(11) NOT NULL, 
+	event_id int(11) NOT NULL,
+    FOREIGN KEY (user_id) references user(userId),
+    FOREIGN KEY (event_id) references event(id)
+);
