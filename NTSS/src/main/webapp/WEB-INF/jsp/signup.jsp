@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <jsp:include page="navbar.jsp"></jsp:include>
+
+<style>
+h1{
+	color: Green
+}
+
+</style>
 </head>
 <body>
 	
@@ -14,7 +21,7 @@
   <h1>Create an Account</h1>
   <div class="card">
    <div class="card-body">
-    <form action = "registerUser" method="post">
+    <form action = "signup" method="post">
 
      <div class=" form-group row">
       <label for="lastName" class="col-sm-2 col-form-label">Email Address</label>
@@ -42,6 +49,15 @@
 			  <option value="Organizer">Organizer</option>
 			 </select>
 	    </div>
+	    
+	    <% 
+     	String message = (String) request.getAttribute("signUpSuccess");
+     			
+     if(message != null){%>
+      <h1 for="userLogin" class="col-sm-6 col-form-label"><%= message %></h1>
+      <%
+     }
+	%>
 	</div>
 
 
